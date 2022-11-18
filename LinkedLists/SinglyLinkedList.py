@@ -15,7 +15,7 @@ class SLL:
             node = node.next
     
     def insertnode(self,value,position):
-        """pass the node value and position at which node is to be inserted"""
+        """pass the node value and position at which node is to be inserted """
         newNode = node(value)
         if self.head is None:
             self.head = newNode
@@ -50,6 +50,20 @@ class SLL:
                 print(node.value)
                 node = node.next
 
+    def searchLL(self,value):
+        if self.head is None:
+            return "the linked list doesnt exist"
+        else:
+            index = 0
+            node = self.head                  
+            index = 0
+            while node is not None:
+                if node.value == value:
+                    return (node.value, index) 
+                node = node.next
+                index += 1
+            return "The value doesnt exist in the linked list"
+
 
 a = SLL()
 # a.head = node(1)
@@ -65,3 +79,4 @@ a.insertnode(40,5)
 print([node.value for node in a])
 
 a.traverseLL()
+print(a.searchLL(40))
