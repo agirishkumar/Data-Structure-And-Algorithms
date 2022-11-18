@@ -15,6 +15,7 @@ class SLL:
             node = node.next
     
     def insertnode(self,value,position):
+        """pass the node value and position at which node is to be inserted"""
         newNode = node(value)
         if self.head is None:
             self.head = newNode
@@ -39,6 +40,15 @@ class SLL:
                 if tempNode == self.tail:
                     self.tail = newNode
 
+    def traverseLL(self):
+        """traversing a singly linked list"""
+        if self.head is None:
+            print('Singly Linked List doesnt exist ')
+        else:
+            node = self.head
+            while node is not None:
+                print(node.value)
+                node = node.next
 
 
 a = SLL()
@@ -53,3 +63,5 @@ a.insertnode(3,1)
 a.insertnode(4,1)
 a.insertnode(40,5)
 print([node.value for node in a])
+
+a.traverseLL()
