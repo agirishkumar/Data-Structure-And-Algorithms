@@ -14,6 +14,11 @@ public class mergesort_linkedlist {
 
   Node head;
 
+  /**
+   * A method to insert a new node with the given data into a linked list.
+   *
+   * @param  data	    the data to be inserted into the linked list
+   */
   void insert(int data) {
     Node newNode = new Node(data);
     if (head == null) {
@@ -29,6 +34,13 @@ public class mergesort_linkedlist {
 
   Node merge(Node a, Node b) {
 
+  /**
+   * A function to merge two nodes in a linked list in a sorted manner.
+   *
+   * @param  a    the first node to merge
+   * @param  b    the second node to merge
+   * @return      the merged node
+   */
     Node result = null;
 
     if(a == null) return b;
@@ -46,6 +58,12 @@ public class mergesort_linkedlist {
     
   }
 
+  /**
+   * A function to perform Merge Sort on a linked list.
+   *
+   * @param  h  the head of the linked list to be sorted
+   * @return    the head of the sorted linked list
+   */
   Node mergeSort(Node h){
     if(h == null || h.next == null) return h;
     Node middle = getMiddle(h);
@@ -56,6 +74,12 @@ public class mergesort_linkedlist {
     return merge(left, right);
   }
 
+  /**
+   * A description of the entire Java function.
+   *
+   * @param  h   description of parameter
+   * @return     description of return value
+   */
   Node getMiddle(Node h){
     if(h == null) return null;
     Node slow = h;
@@ -67,6 +91,12 @@ public class mergesort_linkedlist {
     return slow;
   }
 
+  /**
+   * A description of the entire Java function.
+   *
+   * @param  node	description of parameter
+   * @return         	description of return value
+   */
   void printList(Node node) {
     while (node != null) {
       System.out.print(node.data + " ");
@@ -75,6 +105,12 @@ public class mergesort_linkedlist {
     System.out.println();
   }
 
+  /**
+   * A description of the entire Java function.
+   *
+   * @param  args  description of parameter
+   * @return       description of return value
+   */
   public static void main(String[] args) {
     mergesort_linkedlist list = new mergesort_linkedlist();
         list.insert(3);
