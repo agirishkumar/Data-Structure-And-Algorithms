@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.tcc": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "algorithm": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp"
+  }
+}
